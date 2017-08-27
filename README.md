@@ -28,6 +28,13 @@ Add the following to your `config/initializers/peek.rb`:
 Peek.into Peek::Views::Host
 ```
 
+Optionally, you can set the host manually (e.g via an environment variable)
+for use in containerized environments.
+
+```ruby
+Peek.into Peek::Views::Host, :host => ENV["HOSTNAME"]
+```
+
 ## Contributing
 
 1. Fork it
